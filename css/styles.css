@@ -18,3 +18,100 @@ h6,
 p {
   margin-bottom: 16px;
 }
+
+@font-face {
+  font-family: Kefa;
+  src: url(../css/fonts/Kefa.ttf);
+}
+.logo-holder {
+  background-color: #2c4250;
+  display: flex;
+}
+.logo-holder .logo {
+  width: 100px;
+  min-height: 60px;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-family: font1;
+  font-size: 30px;
+  color: white;
+}
+
+.navHolder {
+  position: fixed;
+}
+
+.bars {
+  display: none;
+}
+
+.bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: white;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.bars.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.bars.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.links {
+  display: flex;
+  background-color: #db8a0a;
+  width: 100vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: height 0.4s, opacity 0.4s ease-in;
+}
+.links a {
+  font-family: font1;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.links.active {
+  height: 100vh;
+  opacity: 1;
+}
+
+@media screen and (max-width: 960px) {
+  .navHolder {
+    margin-left: -10px;
+  }
+
+  .bar-position {
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  .bars .bar {
+    background-color: #2c4250;
+  }
+
+  .links {
+    background-color: #db8a0a;
+    opacity: 0;
+    margin-left: 10px;
+    flex-direction: column;
+    transition: height 0.4s, opacity 0.4s ease-in;
+  }
+}
