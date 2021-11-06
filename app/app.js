@@ -96,6 +96,7 @@ var RECIPES = [
     },
 ]
 
+// =====DYNAMICALLY DISPLAY PAGES===//
 
 function changeRoute() {
     let hashTag = window.location.hash;
@@ -109,6 +110,8 @@ function initURLListener(){
     changeRoute();
 }
 
+// ===HAMBURGER MENU===//
+
 function initListeners() {
     $(".bars").click(function (e) {
         $(".bars").toggleClass("active");
@@ -121,7 +124,28 @@ function initListeners() {
     });
 }
 
-// =====RECIPES===//
+// =====DISPLAY RECIPES===//
+
+function loadRecipeItems(recipeIndex) {
+    let listString = `<button class="back" onclick="loadRecipes()">Back</button><ul>`;
+
+    $.each(RECIPES[recipeIndex].recipeItems, function (index, recipeItem) {
+        listString += `<li id="${index}" class="${recipeItem.checked ?
+        "strike" : ""}"><input ${recipeItem.checked ? (checked =
+            "checked") : ""} type="checkbox" id="${index}" name="${recipeItem.name}" onlcick="itemChecked(this, 
+                ${recipeIndex}, ${index})">
+                <span>${recipeItem.name}</span>
+                <span class="delete" onclick="deleteItem(${recipeIndex}, ${index})">Delete</span></li>`;
+    });
+    listString += `<ul>
+    <div class"addItemInput">
+    <input id="addItem" type="text">
+    <button class="add" onclick="addItem(${recipeIndex})">Add</button>
+    </div>`;
+    $("#app .recipe").html(listString);
+}
+
+
 function loadRecipes() {
     let listString = "<ul>";
 
@@ -135,6 +159,8 @@ function loadRecipes() {
 }
 
 function initListeners() {}
+
+// ===DOCUMENT READY====//
 
 $(document).ready(function () {
     initURLListener();

@@ -198,16 +198,21 @@ footer {
   margin-top: 100px;
 }
 
+.recipe-container {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
 ul {
-  width: 900px;
   margin-bottom: 50px;
-  margin-left: 100px;
 }
 
 li {
   cursor: pointer;
   list-style-type: none;
   height: 50px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   padding-left: 50px;
@@ -263,11 +268,29 @@ li.strike {
 button {
   width: 300px;
   height: 100px;
-  margin-left: 100px;
   border-radius: 10px;
   background-color: #2c4250;
   margin-bottom: 50px;
   font-family: Kefa;
   font-size: 30px;
   color: white;
+}
+
+.back {
+  width: 100px;
+  height: 40px;
+}
+
+.add {
+  width: 100px;
+  height: 40px;
+  margin-top: 30px;
+}
+
+#addItem {
+  width: 300px;
+  height: 50px;
+  margin-right: 20px;
+  border: 3px #2c4250 solid;
+  border-radius: 10px;
 }
