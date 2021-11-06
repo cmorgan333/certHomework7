@@ -58,7 +58,7 @@ p {
 }
 
 .navHolder {
-  position: fixed;
+  position: relative;
 }
 
 .bars {

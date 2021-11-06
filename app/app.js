@@ -158,7 +158,7 @@ function loadRecipes() {
     $("#app .recipe").html(listString);
 }
 
-function initListeners() {}
+// function initListeners() {}
 
 // ===DOCUMENT READY====//
 
