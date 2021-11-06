@@ -95,3 +95,37 @@ button {
 	border: 3px #2c4250 solid;
 	border-radius: 10px;
 }
+
+@media screen and (max-width: 960px) {
+	.recipe-container {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.browse {
+		margin-left: 30px;
+	}
+	ul {
+		width: 800px;
+		margin-left: 30px;
+		margin-right: 30px;
+
+		li {
+			width: 600px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	ul {
+		margin: 0 auto;
+		li {
+			width: 300px;
+		}
+	}
+	.recipe-container {
+		width: 300px;
+		margin-left: 30px;
+		margin: 0 auto;
+		margin-bottom: 100px;
+	}
+}
