@@ -1,3 +1,43 @@
+#app {
+	margin-top: 100px;
+}
+
+ul {
+}
+
+li {
+	cursor: pointer;
+	list-style-type: none;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding-left: 50px;
+	background-color: chartreuse;
+	position: relative;
+}
+
+li:nth-child(odd) {
+	background-color: teal;
+}
+
+li input {
+	margin: 0 20px;
+}
+li.strike {
+	text-decoration: line-through;
+}
+
+.right {
+	position: absolute;
+	right: 50px;
+}
+
+.delete {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+}
+
 .browse {
 	font-family: $font1;
 	font-size: 40px;
@@ -13,5 +53,17 @@
 	background-color: #db8a0a;
 	font-family: $font1;
 	font-size: 40px;
+	color: white;
+}
+
+button {
+	width: 300px;
+	height: 100px;
+	margin-left: 100px;
+	border-radius: 10px;
+	background-color: #2c4250;
+	margin-bottom: 50px;
+	font-family: $font1;
+	font-size: 30px;
 	color: white;
 }
