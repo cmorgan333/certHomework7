@@ -125,6 +125,28 @@ function initListeners() {
 }
 
 // =====DISPLAY RECIPES===//
+function itemChecked(element, recipeIndex, itemIndex){
+
+    $(element).parent.toggleClass("strike");
+let checkedValue = !RECIPES[recipeIndex].recipeItems[itemIndex].checked;
+RECIPES[recipeIndex].recipeItems[itemIndex].checked = checkedValue;
+}
+
+function addItem(recipeIndex){
+    let newItemName = $("#addItem").val();
+    let newItemObj = {
+        name: newItemName,
+        checked: false,
+        quantity: "",
+    };
+    RECIPES[recipeIndex].listItems.push(newItemObj);
+    loadRecipeItems(recipeIndex);
+}
+
+function deleteItem(recipeIndex, index){
+    RECIPES[recipeIndex].recipeItems.splice(index, 1);
+    loadRecipeItems(recipeIndex);
+}
 
 function loadRecipeItems(recipeIndex) {
     let listString = `<button class="back" onclick="loadRecipes()">Back</button><ul>`;
