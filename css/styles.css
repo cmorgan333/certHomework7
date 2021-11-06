@@ -198,6 +198,12 @@ footer {
   margin-top: 100px;
 }
 
+ul {
+  width: 900px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+}
+
 li {
   cursor: pointer;
   list-style-type: none;
@@ -205,12 +211,15 @@ li {
   display: flex;
   align-items: center;
   padding-left: 50px;
-  background-color: chartreuse;
+  background-color: #2c4250;
   position: relative;
+  font-family: Kefa;
+  font-size: 20px;
+  color: white;
 }
 
 li:nth-child(odd) {
-  background-color: teal;
+  background-color: #6a7a83;
 }
 
 li input {

@@ -131,7 +131,7 @@ function loadRecipes() {
         <span class="right">ITEMS: ${recipe.recipeItems.length}</span></li>`
     });
     listString += "</ul";
-    $("#app").html(listString);
+    $("#app .recipe").html(listString);
 }
 
 function initListeners() {}

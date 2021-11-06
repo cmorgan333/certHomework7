@@ -3,6 +3,9 @@
 }
 
 ul {
+	width: 900px;
+	margin-bottom: 50px;
+	margin-left: 100px;
 }
 
 li {
@@ -12,12 +15,15 @@ li {
 	display: flex;
 	align-items: center;
 	padding-left: 50px;
-	background-color: chartreuse;
+	background-color: #2c4250;
 	position: relative;
+	font-family: $font1;
+	font-size: 20px;
+	color: white;
 }
 
 li:nth-child(odd) {
-	background-color: teal;
+	background-color: #6a7a83;
 }
 
 li input {
