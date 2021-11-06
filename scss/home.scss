@@ -1,0 +1,18 @@
+.hero {
+	height: 500px;
+	margin-top: 50px;
+	background-image: url(../images/eggsandflour.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.hero-bottomborder {
+	min-height: 50px;
+	background-color: #db8a0a;
+}
+h2 {
+	font-family: $font1;
+	font-size: 40px;
+	color: #2c4250;
+	margin: 50px auto;
+}
