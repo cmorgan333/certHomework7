@@ -488,6 +488,22 @@ let checkedValue = !RECIPES[recipeIndex].recipeItems[itemIndex].checked;
 RECIPES[recipeIndex].recipeItems[itemIndex].checked = checkedValue;
 }
 
+// ====ADD A RECIPE====//
+
+function addRecipe(RECIPES, recipeIndex){
+    let newRecipeName = $("#addRecipe").val();
+    let newRecipeObj = {
+        name: newRecipeName,
+        checked: false,
+        quantity: "",
+    };
+    RECIPES[recipeIndex].push
+    (newRecipeObj);
+    loadRecipeItems(recipeIndex);
+}
+
+// =====ADD AN INGREDIENT====//
+
 function addItem(recipeIndex){
     let newItemName = $("#addItem").val();
     let newItemObj = {
@@ -499,13 +515,15 @@ function addItem(recipeIndex){
     loadRecipeItems(recipeIndex);
 }
 
+// ====DELETE AN INGREDIENT=====//
+
 function deleteItem(recipeIndex, index){
     RECIPES[recipeIndex].recipeItems.splice(index, 1);
     loadRecipeItems(recipeIndex);
 }
 
 function loadRecipeItems(recipeIndex) {
-    let listString = `<button onclick="loadRecipes()" >Back</button><ul>`;
+    let listString = `<button onclick="loadRecipes()" class="back">Back</button><ul>`;
 
     $.each(RECIPES[recipeIndex].recipeItems, function (index, recipeItem) {
         listString += `<li id="${index}" class="${recipeItem.checked ? "strike" : ""}">
